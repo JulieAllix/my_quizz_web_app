@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useHistory} from "react-router-dom";
 
 import {ButtonCustom} from '../../components/ButtonCustom';
 
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export const Home: React.FC<Props> = () => {
+    const history = useHistory();
 
     return (
         <div className={"component_Home"}>
@@ -24,7 +26,7 @@ export const Home: React.FC<Props> = () => {
                 </span>
             </div>
             <div className={"component_Home__button"}>
-                <ButtonCustom text={'Start'}/>
+                <ButtonCustom text={'Start'} onClick={() => {history.push('/quizz')}}/>
             </div>
         </div>
     )

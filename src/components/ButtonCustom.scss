@@ -1,0 +1,20 @@
+@import "src/assets/css/variables";
+
+.component_ButtonCustom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue;
+  width: 94%;
+  border-radius: 10px;
+  padding: 10px;
+
+  &__text {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 27px;
+    color: $white;
+  }
+}

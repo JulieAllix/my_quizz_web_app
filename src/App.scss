@@ -1,3 +1,14 @@
-.component_App {
+body {
+  height: 100% !important;
+}
 
+#body {
+  height: 100%;
+}
+
+.component_App {
+  min-height: 100vh;
+  height: 100% !important;
+  flex-grow: 1;
+  overflow-y: auto;
 }

@@ -1,5 +1,17 @@
 @import "src/assets/css/variables";
 
 .component_EditThemes {
+  height: 75vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
+  &__themeCardsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
 }

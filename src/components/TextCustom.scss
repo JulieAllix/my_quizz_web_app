@@ -1,0 +1,44 @@
+@import "src/assets/css/variables";
+
+.component_TextCustom {
+
+  // Font style
+  &__card_text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__instructions {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  // Colors
+  &__black {
+    color: $text_primary;
+  }
+
+  &__primary {
+    color: $text_primary;
+  }
+
+  &__secondary {
+    color: $text_secondary;
+  }
+
+  &__tertiary {
+    color: $text_tertiary;
+  }
+
+  &__white {
+    color: $text_white;
+  }
+
+}

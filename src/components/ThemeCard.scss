@@ -1,0 +1,21 @@
+@import "src/assets/css/variables";
+
+.component_ThemeCard {
+  border: 1px solid #DCDCDC;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  &__corail {
+    background-color: $corail;
+  }
+
+  &__white {
+    background-color: $white;
+  }
+}

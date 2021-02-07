@@ -26,7 +26,7 @@ export const Home: React.FC<Props> = () => {
                 </span>
             </div>
             <div className={"component_Home__button"}>
-                <ButtonCustom text={'Start'} onClick={() => {history.push('/quizz')}}/>
+                <ButtonCustom onClick={() => {history.push('/quizz')}}>Start</ButtonCustom>
             </div>
         </div>
     )

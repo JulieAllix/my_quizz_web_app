@@ -1,13 +1,12 @@
 import * as React from 'react';
 import {useState} from "react";
-//import {useHistory} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 import {TextInput} from '../../components/TextInput';
 import {ButtonCustom} from '../../components/ButtonCustom';
 import {TextCustom} from "../../components/TextCustom";
 
 import {
-    auth,
     registerWithEmailAndPassword
 } from "../../utils/firebaseConfig";
 import './SignUp.scss';
@@ -16,13 +15,14 @@ interface Props {
 }
 
 export const SignUp: React.FC<Props> = () => {
-    //const history = useHistory();
+    const history = useHistory();
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [confirmPassword, setConfirmPassword] = useState<string>('');
     const [errorMessage, setErrorMessage] = useState<string>('');
 
     const handleClick = () => {
+        setErrorMessage('')
         if (email === '') {
             setErrorMessage('Please enter your e-mail')
         } else if (password === '') {
@@ -34,7 +34,8 @@ export const SignUp: React.FC<Props> = () => {
         } else {
             console.log('sign up !');
             registerWithEmailAndPassword(email, password).then(res => {
-                    console.log("createUserWithEmailAndPAssword", res)
+                    console.log("createUserWithEmailAndPAssword", res);
+                    history.push('/sign-in')
                 }
             ).catch(error => {
                 console.log("error creat", error)

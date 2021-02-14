@@ -10,6 +10,7 @@ import {SignUp} from './pages/signUp/SignUp';
 import {Home} from './pages/home/Home';
 import {Quizz} from './pages/quizz/Quizz';
 import {EditThemes} from './pages/edit/EditThemes';
+import {CreateThemes} from './pages/createThemes/CreateThemes';
 
 import './App.scss';
 
@@ -23,7 +24,7 @@ function App() {
             case '/quizz':
                 setHeaderText('Parameters of the quizz')
             break;
-            case '/editThemes':
+            case '/edit-themes':
                 setHeaderText('Themes')
                 break;
             case '/sign-in':
@@ -31,6 +32,9 @@ function App() {
                 break;
             case '/sign-up':
                 setHeaderText('Sign up')
+                break;
+            case '/create-theme':
+                setHeaderText('New theme')
                 break;
         }
 
@@ -45,9 +49,10 @@ function App() {
                 <Header title={headerText}/>
                     <Switch>
                         <Route exact path={"/quizz"} component={Quizz}/>
-                        <Route exact path={"/editThemes"} component={EditThemes}/>
+                        <Route exact path={"/edit-themes"} component={EditThemes}/>
                         <Route exact path={"/sign-in"} component={SignIn}/>
                         <Route exact path={"/sign-up"} component={SignUp}/>
+                        <Route exact path={"/create-theme"} component={CreateThemes}/>
                         <Route path={"*"} component={Quizz}/>
                     </Switch>
                 {(location.pathname !== '/sign-in' && location.pathname !== '/sign-up') &&

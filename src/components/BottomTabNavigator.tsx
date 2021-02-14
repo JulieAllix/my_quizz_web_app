@@ -27,7 +27,7 @@ export const BottomTabNavigator: React.FC<Props> = (props) => {
                 className={activeTab === 'edit' ? "component_BottomTabNavigator__item__active" : "component_BottomTabNavigator__item"}
                 onClick={() => {
                     setActiveTab('edit');
-                    history.push('/editThemes');
+                    history.push('/edit-themes');
                 }}
             >
                 Edit

@@ -1,0 +1,14 @@
+@import "src/assets/css/variables";
+
+.component_CreateThemes {
+  height: 75vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__button {
+    margin-bottom: 10px;
+  }
+
+}

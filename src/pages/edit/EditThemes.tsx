@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useHistory} from "react-router-dom";
 
 import {TextCustom} from '../../components/TextCustom';
 import {ThemeCard} from '../../components/ThemeCard';
@@ -12,6 +13,7 @@ interface Props {
 }
 
 export const EditThemes: React.FC<Props> = (props) => {
+    const history = useHistory();
 
     return (
         <div className={"component_EditThemes"} onClick={props.onClick}>
@@ -38,7 +40,7 @@ export const EditThemes: React.FC<Props> = (props) => {
                     onClick={() => {}}
                 />
             </div>
-            <ButtonCustom  color={'blue'} onClick={() => {}}>Create a new theme</ButtonCustom>
+            <ButtonCustom  color={'blue'} onClick={() => history.push('/create-theme')}>Create a new theme</ButtonCustom>
         </div>
     )
 }

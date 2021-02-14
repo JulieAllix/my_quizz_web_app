@@ -31,6 +31,15 @@ export const createTheme = (name:string, userId: string) => {
         themeName: name
     })
 }
+
+export const readThemes = (userId: string) => {
+    const userRef = database.ref('users/' + userId + '/themeName');
+    return userRef.on('value', (snapshot) => {
+        const data = snapshot.val();
+        console.log("data", data)
+    })
+
+}
 /*
 export const resetPassword = (email) => {
     return auth.sendPasswordResetEmail(email);

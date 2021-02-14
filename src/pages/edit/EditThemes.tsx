@@ -1,10 +1,13 @@
 import * as React from 'react';
 import {useHistory} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 import {TextCustom} from '../../components/TextCustom';
 import {ThemeCard} from '../../components/ThemeCard';
 import {ButtonCustom} from '../../components/ButtonCustom';
 
+import {readThemes} from '../../utils/firebaseConfig';
+import {State} from "../../utils/redux/store";
 import './EditThemes.scss';
 
 interface Props {
@@ -14,6 +17,8 @@ interface Props {
 
 export const EditThemes: React.FC<Props> = (props) => {
     const history = useHistory();
+    const user = useSelector((state: State) => state.user);
+    readThemes(user.uid);
 
     return (
         <div className={"component_EditThemes"} onClick={props.onClick}>

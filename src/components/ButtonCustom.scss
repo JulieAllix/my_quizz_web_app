@@ -4,10 +4,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $blue;
   width: 94%;
   border-radius: 10px;
   padding: 10px;
+
+  &__blue {
+    background-color: $blue;
+  }
+
+  &__coral {
+    background-color: $coral;
+  }
 
   &__text {
     font-family: Open Sans;

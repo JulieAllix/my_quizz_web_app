@@ -25,8 +25,17 @@ export const Home: React.FC<Props> = () => {
                     Quizzy
                 </span>
             </div>
-            <div className={"component_Home__button"}>
-                <ButtonCustom onClick={() => {history.push('/quizz')}}>Start</ButtonCustom>
+            <div className={"component_Home__buttonWrapper"}>
+                <div className={"component_Home__button"}>
+                    <ButtonCustom color={'blue'} onClick={() => {
+                        history.push('/sign-in')
+                    }}>Sign In</ButtonCustom>
+                </div>
+                <div className={"component_Home__button"}>
+                    <ButtonCustom color={'coral'} onClick={() => {
+                        history.push('/quizz')
+                    }}>Sign Up</ButtonCustom>
+                </div>
             </div>
         </div>
     )

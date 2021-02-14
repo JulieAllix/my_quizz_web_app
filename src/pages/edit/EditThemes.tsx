@@ -38,7 +38,7 @@ export const EditThemes: React.FC<Props> = (props) => {
                     onClick={() => {}}
                 />
             </div>
-            <ButtonCustom onClick={() => {}}>Create a new theme</ButtonCustom>
+            <ButtonCustom  color={'blue'} onClick={() => {}}>Create a new theme</ButtonCustom>
         </div>
     )
 }

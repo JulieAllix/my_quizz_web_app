@@ -32,8 +32,11 @@
     }
   }
 
-  &__button {
+  &__buttonWrapper {
     margin-top: 120px;
     width: 85%;
+  }
+  &__button {
+    margin-bottom: 10px;
   }
 }

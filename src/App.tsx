@@ -4,6 +4,8 @@ import {Route, Switch, useLocation} from "react-router-dom";
 
 import {Header} from "./components/Header";
 import {BottomTabNavigator} from "./components/BottomTabNavigator";
+
+import {SignIn} from './pages/signIn/SignIn';
 import {Home} from './pages/home/Home';
 import {Quizz} from './pages/quizz/Quizz';
 import {EditThemes} from './pages/edit/EditThemes';
@@ -23,6 +25,9 @@ function App() {
             case '/editThemes':
                 setHeaderText('Themes')
                 break;
+            case '/sign-in':
+                setHeaderText('Sign in')
+                break;
         }
 
     }, [location.pathname]);
@@ -37,6 +42,7 @@ function App() {
                     <Switch>
                         <Route exact path={"/quizz"} component={Quizz}/>
                         <Route exact path={"/editThemes"} component={EditThemes}/>
+                        <Route exact path={"/sign-in"} component={SignIn}/>
                         <Route path={"*"} component={Quizz}/>
                     </Switch>
                 <BottomTabNavigator />

@@ -6,6 +6,7 @@ import {Header} from "./components/Header";
 import {BottomTabNavigator} from "./components/BottomTabNavigator";
 
 import {SignIn} from './pages/signIn/SignIn';
+import {SignUp} from './pages/signUp/SignUp';
 import {Home} from './pages/home/Home';
 import {Quizz} from './pages/quizz/Quizz';
 import {EditThemes} from './pages/edit/EditThemes';
@@ -28,6 +29,9 @@ function App() {
             case '/sign-in':
                 setHeaderText('Sign in')
                 break;
+            case '/sign-up':
+                setHeaderText('Sign up')
+                break;
         }
 
     }, [location.pathname]);
@@ -43,6 +47,7 @@ function App() {
                         <Route exact path={"/quizz"} component={Quizz}/>
                         <Route exact path={"/editThemes"} component={EditThemes}/>
                         <Route exact path={"/sign-in"} component={SignIn}/>
+                        <Route exact path={"/sign-up"} component={SignUp}/>
                         <Route path={"*"} component={Quizz}/>
                     </Switch>
                 <BottomTabNavigator />

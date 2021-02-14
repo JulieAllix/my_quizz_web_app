@@ -3,7 +3,7 @@ import * as React from 'react';
 import './TextCustom.scss';
 
 interface Props {
-    type: 'card_text' | 'instructions',
+    type: 'card_text' | 'instructions' | 'label' | 'error',
     color: 'primary' | 'secondary' | 'tertiary' | 'white'
 }
 

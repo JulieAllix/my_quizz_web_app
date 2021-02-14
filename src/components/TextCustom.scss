@@ -20,6 +20,23 @@
     text-align: center;
   }
 
+  &__label {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__error {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+  }
+
   // Colors
   &__black {
     color: $text_primary;

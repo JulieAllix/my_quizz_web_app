@@ -33,7 +33,7 @@ export const Home: React.FC<Props> = () => {
                 </div>
                 <div className={"component_Home__button"}>
                     <ButtonCustom color={'coral'} onClick={() => {
-                        history.push('/quizz')
+                        history.push('/sign-up')
                     }}>Sign Up</ButtonCustom>
                 </div>
             </div>

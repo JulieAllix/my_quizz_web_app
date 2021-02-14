@@ -50,7 +50,9 @@ function App() {
                         <Route exact path={"/sign-up"} component={SignUp}/>
                         <Route path={"*"} component={Quizz}/>
                     </Switch>
-                <BottomTabNavigator />
+                {(location.pathname !== '/sign-in' && location.pathname !== '/sign-up') &&
+                <BottomTabNavigator/>
+                }
             </div>
         }
     </div>

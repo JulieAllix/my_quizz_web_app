@@ -4,10 +4,13 @@ import {useState} from "react";
 
 import {TextInput} from '../../components/TextInput';
 import {ButtonCustom} from '../../components/ButtonCustom';
-
-import './SignUp.scss';
 import {TextCustom} from "../../components/TextCustom";
 
+import {
+    auth,
+    registerWithEmailAndPassword
+} from "../../utils/firebaseConfig";
+import './SignUp.scss';
 
 interface Props {
 }
@@ -29,9 +32,15 @@ export const SignUp: React.FC<Props> = () => {
         } else if (password !== confirmPassword) {
             setErrorMessage('Your passwords are not identical')
         } else {
-            console.log('sign up !')
-        }
-    }
+            console.log('sign up !');
+            registerWithEmailAndPassword(email, password).then(res => {
+                    console.log("createUserWithEmailAndPAssword", res)
+                }
+            ).catch(error => {
+                console.log("error creat", error)
+            })
+    }}
+
     return (
         <div className={"component_SignUp"}>
             <div className={"component_SignUp__inputsWrapper"}>
